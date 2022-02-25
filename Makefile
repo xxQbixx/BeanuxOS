@@ -1,14 +1,16 @@
 ###################################
-#		                            #
-#		  Beanux OS instalacja      #
+#		                  #
+#       Beanux OS instalacja      #
 #                                 #
 #   (kernel nie będzie działać)   #
 #                                 #
 ###################################
-pobierz: update-grub
+all: update-grub
+
+pobierz: 
 	cd /home/$USER && wget https://ftp.icm.edu.pl/pub/OpenBSD/7.0/src.tar.gz && wget https://git.kernel.org/torvalds/t/linux-5.17-rc5.tar.gz
 	apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev
-wypakuj: pobierzsos
+wypakuj: pobierzs
 	cd /home/$USER && unxz -v linux-*.tar.xz
 	cd /home/$USER && unxz -v src.tar.gz
 utworz-bestie: wypakuj
