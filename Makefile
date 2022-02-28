@@ -5,7 +5,6 @@
 #   (kernel nie będzie działać)   #
 #                                 #
 ###################################
-all: update-grub
 
 pobierz: 
 	cd /home/$USER && wget https://ftp.icm.edu.pl/pub/OpenBSD/7.0/src.tar.gz && wget https://git.kernel.org/torvalds/t/linux-5.17-rc5.tar.gz
